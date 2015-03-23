@@ -11,7 +11,7 @@ import org.slf4j.Logger;
  */
 public class SyxyConfigParser implements UserConfigParser {
 
-    Logger logger = LogUtil.getJessMALogger();
+    Logger logger = LogUtil.getLogger("sxy");
 
     private final static String SYXY_HOME = "syxy-home";
 

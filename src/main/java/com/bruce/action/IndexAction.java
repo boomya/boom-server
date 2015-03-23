@@ -21,11 +21,10 @@ public class IndexAction extends ActionSupport {
     @Override
     public String execute() throws Exception {
         now = new Date();
-        System.out.println("==================222233");
 
         userService.sayHello();
 
-        LogUtil.getJessMALogger().info("==================233");
+        LogUtil.getLogger("sxy").info("==================233");
         getResponse().getWriter().write("1111111111111111");
 //        return SUCCESS;
 //        return "login2";

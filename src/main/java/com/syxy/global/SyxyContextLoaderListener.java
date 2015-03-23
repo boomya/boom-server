@@ -11,7 +11,7 @@ import javax.servlet.ServletContextEvent;
  */
 public class SyxyContextLoaderListener extends ContextLoaderListener {
 
-    private Logger logger = LogUtil.getJessMALogger();
+    private Logger logger = LogUtil.getLogger("sxy");
 
     @Override
     public void contextInitialized(ServletContextEvent event) {

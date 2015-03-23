@@ -12,11 +12,11 @@ import javax.servlet.ServletContextEvent;
  */
 public class SyxyAppLifeCycleListener implements AppLifeCycleListener {
 
-    Logger logger = LogUtil.getJessMALogger();
+    Logger logger = LogUtil.getLogger("sxy");
 
     @Override
     public void onStartup(ServletContext servletContext, ServletContextEvent servletContextEvent) {
-        LogUtil.getJessMALogger().info("==================111111111111");
+        LogUtil.getLogger(SyxyAppLifeCycleListener.class).info("==================111111111111");
         logger.info(this.getClass().getName() + " -> onStartup()");
     }
 
