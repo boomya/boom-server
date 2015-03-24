@@ -28,6 +28,7 @@ public class IndexAction extends ActionSupport {
         getResponse().getWriter().write("1111111111111111");
 //        return SUCCESS;
 //        return "login2";
+//        Launch.destory();
         return NONE;
 //        return "redirect";
     }
