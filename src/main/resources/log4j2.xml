@@ -12,7 +12,7 @@
 		</Console>
 		<!--<RollingRandomAccessFile name="ROLLFILE" fileName="${sys:catalina.home}/logs/jessma.log"-->
 								 <!--filePattern="$${sys:catalina.home}/logs/$${date:yyyy-MM}/jessma-%d{yyyy-MM-dd}-%i.log.gz">-->
-        <RollingRandomAccessFile name="ROLLFILE" fileName="logs/sxy.log"
+        <RollingRandomAccessFile name="ROLLFILE" fileName="logs/lesdo.log"
                                  filePattern="logs/$${date:yyyy-MM}/sxy-%d{yyyy-MM-dd}-%i.log.gz">
 			<ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY" />
 			<PatternLayout pattern="%d{ABSOLUTE} &lt;%c&gt; %5p [%t]: %m%n"/>
@@ -26,6 +26,7 @@
 		<!-- Root Logger -->
 		<Root level="INFO">
 			<AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="STDERR" />
             <AppenderRef ref="ROLLFILE" />
 		</Root>
 		<!-- JessMA Logger -->
@@ -33,10 +34,9 @@
 			<AppenderRef ref="STDERR" />
 			<AppenderRef ref="ROLLFILE" />			
 		</Logger>
-        <!-- SXY Logger -->
-        <Logger name="sxy" level="DEBUG" additivity="false">
+        <!-- lesdo Logger -->
+        <Logger name="lesdo" level="DEBUG" additivity="false">
             <AppenderRef ref="STDERR" />
-            <AppenderRef ref="STDOUT" />
             <AppenderRef ref="ROLLFILE" />
         </Logger>
 		<!-- MyBatis Logger -->

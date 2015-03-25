@@ -14,8 +14,13 @@
     <!-- 配置文件 -->
     <context:property-placeholder location="classpath:config.properties" />
 
+    <bean id="service" abstract="true" init-method="init" class="com.lesdo.standalone.service.impl.Service" />
+
     <bean id="userService" class="com.lesdo.standalone.service.impl.UserServiceImpl">
         <constructor-arg value="${test1}" />
     </bean>
+
+    <bean id="scheduleService" class="com.lesdo.standalone.service.impl.ScheduleServiceImpl" init-method="init" />
+
 
 </beans>
