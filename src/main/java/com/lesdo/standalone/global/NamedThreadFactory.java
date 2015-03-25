@@ -1,4 +1,4 @@
-package com.syxy.global;
+package com.lesdo.standalone.global;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;

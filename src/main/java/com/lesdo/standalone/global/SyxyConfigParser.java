@@ -1,4 +1,4 @@
-package com.syxy.global;
+package com.lesdo.standalone.global;
 
 import org.dom4j.Element;
 import org.jessma.app.UserConfigParser;

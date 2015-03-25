@@ -1,4 +1,4 @@
-package com.syxy.global;
+package com.lesdo.standalone.global;
 
 import org.jessma.util.LogUtil;
 import org.slf4j.Logger;

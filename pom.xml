@@ -4,12 +4,11 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.sxyx</groupId>
-	<artifactId>sxyx-web-sample</artifactId>
-	<version>1</version>
+	<groupId>com.lesdo</groupId>
+	<artifactId>standalone</artifactId>
+	<version>1.0.0</version>
     <packaging>war</packaging>
-    <!--<packaging>jar</packaging>-->
-	<name>sxyx-web-sample Maven Webapp</name>
+	<name>lesdo-standalone</name>
 
 	<dependencies>
         <dependency>
@@ -45,7 +44,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>sxyx</finalName>
+		<finalName>standalone</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -86,7 +85,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.syxy.Launch</mainClass>
+                            <mainClass>com.lesdo.standalone.Launched</mainClass>
                         </manifest>
                         <manifestEntries>
                             <Class-Path>.</Class-Path>

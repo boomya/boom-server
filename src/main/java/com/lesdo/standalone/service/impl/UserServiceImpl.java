@@ -1,6 +1,6 @@
-package com.syxy.service.impl;
+package com.lesdo.standalone.service.impl;
 
-import com.syxy.service.UserService;
+import com.lesdo.standalone.service.UserService;
 import org.jessma.util.LogUtil;
 
 /**

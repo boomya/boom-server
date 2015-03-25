@@ -1,11 +1,9 @@
-package com.syxy;
+package com.lesdo.standalone;
 
-import com.syxy.server.WebServer;
-import org.eclipse.jetty.server.Connector;
+import com.lesdo.standalone.server.WebServer;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
-import org.jessma.util.LogUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +13,7 @@ import java.util.Properties;
 /**
  * Created by jiangshan on 15/3/23.
  */
-public class Launch {
+public class Launched {
     private static Server server;
     private static ServerConnector connector;
     private static WebAppContext webContext;
@@ -68,7 +66,7 @@ public class Launch {
     }
 
     public static void main(String[] args) {
-        String webappRootPath = Launch.class.getClassLoader().getResource(".").getPath();
+        String webappRootPath = Launched.class.getClassLoader().getResource(".").getPath();
         System.setProperty("webappRootPath", webappRootPath);
 
         int port = 8080;
@@ -78,7 +76,7 @@ public class Launch {
 
         InputStream inputStream = null;
         try {
-            inputStream = Launch.class.getClassLoader().getResource("run.properties").openStream();
+            inputStream = Launched.class.getClassLoader().getResource("run.properties").openStream();
             Properties properties = new Properties();
             properties.load(inputStream);
             port = Integer.valueOf(properties.getProperty("jetty.port"));

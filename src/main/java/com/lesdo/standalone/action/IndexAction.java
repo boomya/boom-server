@@ -1,6 +1,6 @@
-package com.bruce.action;
+package com.lesdo.standalone.action;
 
-import com.syxy.service.UserService;
+import com.lesdo.standalone.service.UserService;
 import org.jessma.ext.spring.SpringBean;
 import org.jessma.mvc.ActionSupport;
 import org.jessma.util.LogUtil;

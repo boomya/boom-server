@@ -1,4 +1,4 @@
-package com.syxy.global;
+package com.lesdo.standalone.global;
 
 import org.jessma.app.AppLifeCycleListener;
 import org.jessma.util.LogUtil;

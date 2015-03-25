@@ -1,6 +1,6 @@
-package com.syxy.server;
+package com.lesdo.standalone.server;
 
-import com.syxy.global.ExecutorServices;
+import com.lesdo.standalone.global.ExecutorServices;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
@@ -19,7 +19,7 @@ public class WebServer {
      */
     public static Server createServerInSource(int port, String contextPath, String webappRootPath, String webappPath) {
 
-        Server server = new Server(new ExecutorThreadPool(ExecutorServices.createExecutorService("WebServer")));
+        Server server = new Server(new ExecutorThreadPool(ExecutorServices.createExecutorService("standalone")));
         // 设置在JVM退出时关闭Jetty的钩子。
         server.setStopAtShutdown(false);
 

@@ -14,7 +14,7 @@
     <!-- 配置文件 -->
     <context:property-placeholder location="classpath:config.properties" />
 
-    <bean id="userService" class="com.syxy.service.impl.UserServiceImpl">
+    <bean id="userService" class="com.lesdo.standalone.service.impl.UserServiceImpl">
         <constructor-arg value="${test1}" />
     </bean>
 

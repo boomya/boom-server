@@ -1,4 +1,4 @@
-package com.syxy.service;
+package com.lesdo.standalone.service;
 
 /**
  * Created by jiangshan on 15/3/20.
