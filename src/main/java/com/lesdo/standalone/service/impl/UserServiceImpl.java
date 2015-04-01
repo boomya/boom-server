@@ -6,11 +6,15 @@ import org.jessma.util.LogUtil;
 /**
  * Created by jiangshan on 15/3/20.
  */
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends AbstractService implements UserService {
     private String test = null;
     public UserServiceImpl(String test){
         this.test = test;
     }
+
+//    public void init(){
+//        LogUtil.getJessMALogger().info("======= INIT =======");
+//    }
 
     @Override
     public void sayHello() {

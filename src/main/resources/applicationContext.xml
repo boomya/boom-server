@@ -14,13 +14,19 @@
     <!-- 配置文件 -->
     <context:property-placeholder location="classpath:config.properties" />
 
-    <bean id="service" abstract="true" init-method="init" class="com.lesdo.standalone.service.impl.Service" />
+    <bean id="localServiceLocator" class="com.lesdo.standalone.service.LocalServiceLocator" />
 
-    <bean id="userService" class="com.lesdo.standalone.service.impl.UserServiceImpl">
+    <bean id="service" depends-on="localServiceLocator" abstract="true" init-method="init" class="com.lesdo.standalone.service.impl.AbstractService" />
+
+    <bean id="userService" class="com.lesdo.standalone.service.impl.UserServiceImpl" parent="service">
         <constructor-arg value="${test1}" />
     </bean>
 
-    <bean id="scheduleService" class="com.lesdo.standalone.service.impl.ScheduleServiceImpl" init-method="init" />
+    <bean id="scheduleService" class="com.lesdo.standalone.service.impl.ScheduleServiceImpl" parent="service"/>
+
+    <bean id="copywritingService" class="com.lesdo.standalone.service.impl.CopywritingServiceImpl" parent="service" />
+
+
 
 
 </beans>

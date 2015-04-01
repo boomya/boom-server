@@ -1,13 +1,19 @@
 package com.lesdo.standalone;
 
+import com.lesdo.im.IMUtils;
+import com.lesdo.im.util.SystemGlobals;
 import com.lesdo.standalone.server.WebServer;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 /**
@@ -66,6 +72,7 @@ public class Launched {
     }
 
     public static void main(String[] args) {
+
         String webappRootPath = Launched.class.getClassLoader().getResource(".").getPath();
         System.setProperty("webappRootPath", webappRootPath);
 
@@ -103,5 +110,6 @@ public class Launched {
         }
 
         startJetty(port, context, webappRootPath, webappPath);
+
     }
 }

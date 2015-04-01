@@ -24,14 +24,13 @@ public abstract class Schedule implements Runnable {
             return;
         }
         this.task = task;
-        future = ScheduleThreadPool.execute(this);
+        future = ScheduleThreadPool.execute(this, task);
     }
 
     @Override
     public void run(){
         long beginTime = 0L;
         try{
-            logger.info(this.hashCode() + " in ======>");
             if(!isDone.get()){
                 logger.info(" task(" + task.getTaskName() + ") not done. so return. " );
                 return;
