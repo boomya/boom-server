@@ -11,6 +11,8 @@
 	http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:component-scan base-package="com.lesdo.standalone.service"/>
+
     <!-- 配置文件 -->
     <context:property-placeholder location="classpath:config.properties" />
 
@@ -18,13 +20,13 @@
 
     <bean id="service" depends-on="localServiceLocator" abstract="true" init-method="init" class="com.lesdo.standalone.service.impl.AbstractService" />
 
-    <bean id="userService" class="com.lesdo.standalone.service.impl.UserServiceImpl" parent="service">
-        <constructor-arg value="${test1}" />
-    </bean>
+    <!--<bean id="userService" class="com.lesdo.standalone.service.impl.UserServiceImpl" parent="service">-->
+        <!--<constructor-arg value="${test1}" />-->
+    <!--</bean>-->
 
     <bean id="scheduleService" class="com.lesdo.standalone.service.impl.ScheduleServiceImpl" parent="service"/>
 
-    <bean id="copywritingService" class="com.lesdo.standalone.service.impl.CopywritingServiceImpl" parent="service" />
+    <!--<bean id="copywritingService" class="com.lesdo.standalone.service.impl.CopywritingServiceImpl" parent="service" />-->
 
 
 
