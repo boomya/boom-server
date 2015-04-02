@@ -15,4 +15,9 @@ public class CopywritingServiceImpl extends AbstractService implements Copywriti
     public String getWelcomeCopy() {
         return "welcome...";
     }
+
+    @Override
+    public String getCopywritingById(int copywritingId) {
+        return "copywriting:" + copywritingId;
+    }
 }

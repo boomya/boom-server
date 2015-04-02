@@ -1,28 +1,23 @@
 package com.lesdo.standalone;
 
-import com.lesdo.im.IMUtils;
-import com.lesdo.im.util.SystemGlobals;
 import com.lesdo.standalone.server.WebServer;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 /**
  * Created by jiangshan on 15/3/23.
  */
 public class Launched {
-    private static Server server;
+
+    private static Server          server;
     private static ServerConnector connector;
-    private static WebAppContext webContext;
+    private static WebAppContext   webContext;
 
     /**
      * 创建用于开发运行调试的Jetty Server, 以src/main/webapp为Web应用目录.
@@ -53,8 +48,6 @@ public class Launched {
         return server;
     }
 
-
-
     /**
      * 启动jetty服务
      */
@@ -79,7 +72,6 @@ public class Launched {
         int port = 8080;
         String context = "/";
         String webappPath = "WEB-INF/web.xml";
-
 
         InputStream inputStream = null;
         try {

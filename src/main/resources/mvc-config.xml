@@ -39,7 +39,7 @@
 		<action-convention
 			enable="true"
 			detect-physical-file="true"
-			action-base-package="com.bruce.action"
+            action-base-package="com.lesdo.standalone.action"
 			dispatch-file-path="${jsp-path}"
 			dispatch-file-type="jsp"
 			physical-file-path=""

@@ -1,6 +1,7 @@
 package com.lesdo.standalone.action;
 
 import com.lesdo.standalone.service.CopywritingService;
+import com.lesdo.standalone.service.LocalServiceLocator;
 import com.lesdo.standalone.service.UserService;
 import org.jessma.ext.spring.SpringBean;
 import org.jessma.mvc.ActionSupport;
@@ -18,13 +19,13 @@ public class IndexAction extends ActionSupport {
         return now;
     }
 
-    private UserService userService;
+    private UserService userService = LocalServiceLocator.getService(UserService.class);
 
     private CopywritingService copywritingService;
-//    Logger logger = LogUtil.getJessMALogger();
+    //    Logger logger = LogUtil.getJessMALogger();
     Logger logger = LogUtil.getLogger(IndexAction.class);
 
-    @SpringBean("userService")
+    //    @SpringBean("userService")
     @Override
     public String execute() throws Exception {
         now = new Date();

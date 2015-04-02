@@ -5,4 +5,6 @@ package com.lesdo.standalone.service;
  */
 public interface CopywritingService {
     String getWelcomeCopy();
+
+    String getCopywritingById(int copywritingId);
 }
