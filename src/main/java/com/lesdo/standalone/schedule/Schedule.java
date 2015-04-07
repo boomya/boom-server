@@ -1,5 +1,7 @@
 package com.lesdo.standalone.schedule;
 
+import com.lesdo.ext.spring.thread.ScheduleThreadPool;
+import com.lesdo.ext.spring.thread.Task;
 import org.jessma.util.LogUtil;
 import org.slf4j.Logger;
 
@@ -10,16 +12,17 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * Created by jiangshan on 15/3/25.
  */
 public abstract class Schedule implements Runnable {
-    protected Logger logger = LogUtil.getLogger("lesdo");
-    private Task task = null;
 
-    private long counter = 0L;
-    private AtomicBoolean isDone = new AtomicBoolean(Boolean.TRUE);
+    protected Logger logger = LogUtil.getLogger("lesdo");
+    private   Task   task   = null;
+
+    private long          counter = 0L;
+    private AtomicBoolean isDone  = new AtomicBoolean(Boolean.TRUE);
 
     private ScheduledFuture<?> future = null;
 
-    public void start(Task task){
-        if(task == null){
+    public void start(Task task) {
+        if (task == null) {
             logger.error("task==null. start task fail. ");
             return;
         }
@@ -28,9 +31,9 @@ public abstract class Schedule implements Runnable {
     }
 
     @Override
-    public void run(){
+    public void run() {
         long beginTime = 0L;
-        try{
+        try {
             if(!isDone.get()){
                 logger.info(" task(" + task.getTaskName() + ") not done. so return. " );
                 return;

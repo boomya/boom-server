@@ -18,6 +18,7 @@ public class SyxyAppLifeCycleListener implements AppLifeCycleListener {
     public void onStartup(ServletContext servletContext, ServletContextEvent servletContextEvent) {
         LogUtil.getLogger(SyxyAppLifeCycleListener.class).info("==================111111111111");
         logger.info(this.getClass().getName() + " -> onStartup()");
+
     }
 
     @Override

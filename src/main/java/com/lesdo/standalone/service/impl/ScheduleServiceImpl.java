@@ -1,8 +1,8 @@
 package com.lesdo.standalone.service.impl;
 
+import com.lesdo.ext.spring.thread.Task;
 import com.lesdo.standalone.schedule.AutoWelcomeTask;
 import com.lesdo.standalone.schedule.Schedule;
-import com.lesdo.standalone.schedule.Task;
 import com.lesdo.standalone.service.ScheduleService;
 import org.jessma.util.LogUtil;
 
@@ -26,7 +26,7 @@ public class ScheduleServiceImpl extends AbstractService implements ScheduleServ
         Schedule schedule = new AutoWelcomeTask();
         Task task = new Task();
         task.setTaskName("AutoWelcomeTask");
-        task.setIntervalTime(10000L);
+        task.setIntervalTime(2000L);
         schedule.start(task);
     }
 }

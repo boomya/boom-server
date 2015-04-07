@@ -1,4 +1,4 @@
-package com.lesdo.standalone.action;
+package com.lesdo.standalone.action.test;
 
 import com.lesdo.ext.spring.annotation.LocalServiceField;
 import com.lesdo.standalone.service.CopywritingService;
@@ -20,7 +20,6 @@ public class IndexAction extends ActionSupport {
     @LocalServiceField
     private UserService userService;
 
-    @LocalServiceField
     private CopywritingService copywritingService;
     //    Logger logger = LogUtil.getJessMALogger();
     Logger logger = LogUtil.getLogger(IndexAction.class);
@@ -34,7 +33,7 @@ public class IndexAction extends ActionSupport {
 
         logger.info("==================233");
 //        getResponse().getWriter().write("1111111111111111" + copywritingService.getWelcomeCopy());
-        getResponse().getWriter().write("1111111111111111. " + this.hashCode() + " " + copywritingService.getWelcomeCopy() + " " + userService.hashCode());
+        getResponse().getWriter().write("2222222222222");
 //        return SUCCESS;
 //        return "login2";
 //        Launch.destory();

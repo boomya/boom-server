@@ -11,15 +11,21 @@
 	http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="localServiceLocator" class="com.lesdo.standalone.service.LocalServiceLocator" />
+
+    <!--<bean id="localServiceLocator" class="com.lesdo.standalone.service.LocalServiceLocator" />-->
     <context:component-scan base-package="com.lesdo.standalone.service"/>
+    <context:annotation-config />
+    <!-- 自定义的BeanProcessor -->
+    <!--<bean class="com.lesdo.standalone.annotation.LocalServiceBeanProcessor" />-->
+    <bean id="localServiceBeanInit" class="com.lesdo.ext.spring.processor.LocalServiceBeanInit" />
+    <!--<bean id="webDaemon" class="com.lesdo.standalone.LaunchedDaemon" init-method="start" destroy-method="destory"/>-->
 
     <!-- 配置文件 -->
     <context:property-placeholder location="classpath:config.properties" />
 
 
 
-    <bean id="service" depends-on="localServiceLocator" abstract="true" init-method="init" class="com.lesdo.standalone.service.impl.AbstractService" />
+    <bean id="service" abstract="true" init-method="init" class="com.lesdo.standalone.service.impl.AbstractService" />
 
     <!--<bean id="userService" class="com.lesdo.standalone.service.impl.UserServiceImpl" parent="service">-->
         <!--<constructor-arg value="${test1}" />-->
@@ -28,7 +34,6 @@
     <bean id="scheduleService" class="com.lesdo.standalone.service.impl.ScheduleServiceImpl" parent="service"/>
 
     <!--<bean id="copywritingService" class="com.lesdo.standalone.service.impl.CopywritingServiceImpl" parent="service" />-->
-
 
 
 

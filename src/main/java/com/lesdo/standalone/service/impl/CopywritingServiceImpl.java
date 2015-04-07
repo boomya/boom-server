@@ -1,14 +1,12 @@
 package com.lesdo.standalone.service.impl;
 
-import com.lesdo.standalone.annotation.LocalService;
+import com.lesdo.ext.spring.annotation.LocalService;
 import com.lesdo.standalone.service.CopywritingService;
-
-import org.springframework.stereotype.Service;
 
 /**
  * Created by jiangshan on 15/3/31.
  */
-@LocalService(CopywritingService.class)
+@LocalService
 public class CopywritingServiceImpl extends AbstractService implements CopywritingService {
 
     @Override

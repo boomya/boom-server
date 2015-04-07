@@ -6,8 +6,11 @@
 
 	<groupId>com.lesdo</groupId>
 	<artifactId>standalone</artifactId>
-	<version>1.0.0</version>
-    <packaging>war</packaging>
+	<version>1.0.1</version>
+    <modules>
+        <module>../lesdo-ext-spring</module>
+    </modules>
+    <packaging>pom</packaging>
 	<name>lesdo-standalone</name>
 
 	<dependencies>
@@ -36,12 +39,16 @@
             <!--<artifactId>spring-expression</artifactId>-->
             <!--<version>4.1.5.RELEASE</version>-->
         <!--</dependency>-->
-
         <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-webapp</artifactId>
-            <version>9.2.10.v20150310</version>
+            <groupId>com.lesdo</groupId>
+            <artifactId>ext-spring</artifactId>
+            <version>1.0.2</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.eclipse.jetty</groupId>-->
+            <!--<artifactId>jetty-webapp</artifactId>-->
+            <!--<version>9.2.10.v20150310</version>-->
+        <!--</dependency>-->
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
@@ -53,11 +60,11 @@
 			<artifactId>jessma-core</artifactId>
 			<version>3.5.1</version>
 		</dependency>
-        <dependency>
-            <groupId>org.jessma</groupId>
-            <artifactId>jessma-ext-spring</artifactId>
-            <version>3.5.1</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.jessma</groupId>-->
+            <!--<artifactId>jessma-ext-spring</artifactId>-->
+            <!--<version>3.5.1</version>-->
+        <!--</dependency>-->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>

@@ -1,10 +1,9 @@
 package com.lesdo.standalone.schedule;
 
+import com.lesdo.ext.spring.ServiceLocator;
 import com.lesdo.im.IMUtils;
 import com.lesdo.standalone.redis.RedisPool;
 import com.lesdo.standalone.service.CopywritingService;
-import com.lesdo.standalone.service.LocalServiceLocator;
-import com.lesdo.standalone.service.TestService;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -16,12 +15,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class AutoWelcomeTask extends Schedule {
 
     private AtomicInteger      counter            = new AtomicInteger(0);
-    private CopywritingService copywritingService = LocalServiceLocator.getService(CopywritingService.class);
+    private CopywritingService copywritingService = ServiceLocator.getService(CopywritingService.class);
 
     @Override
     protected void execute() {
 
-        logger.info("-------- AutoWelcomeTask --------" + copywritingService.getWelcomeCopy());
+//        logger.info("-------- AutoWelcomeTask --------" + copywritingService.getWelcomeCopy());
         /**
          * 获取redis中刚加入的用户id列表并清空
          * 使用小Do帐号发送欢迎信息

@@ -1,6 +1,6 @@
 package com.lesdo.standalone.redis;
 
-import com.lesdo.standalone.global.SystemGlobals;
+import com.lesdo.ext.spring.global.SystemGlobals;
 import org.jessma.util.LogUtil;
 import org.slf4j.Logger;
 import redis.clients.jedis.Jedis;

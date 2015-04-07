@@ -47,7 +47,8 @@
 		/>
 		
 		<action-filters>
-            <filter pattern=".*" class="org.jessma.ext.spring.SpringInjectFilter"/>
+            <!--<filter pattern=".*" class="org.jessma.ext.spring.SpringInjectFilter"/>-->
+            <filter pattern=".*" class="com.lesdo.ext.spring.processor.LocalServiceInjectFilter"/>
 			<!--  
 			<filter pattern=".*" class="org.jessma.app.DaoInjectFilter"/>
 			<filter pattern=".*" class="org.jessma.ext.spring.SpringInjectFilter"/>

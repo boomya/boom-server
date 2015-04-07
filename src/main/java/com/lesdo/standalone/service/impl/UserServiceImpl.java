@@ -1,13 +1,13 @@
 package com.lesdo.standalone.service.impl;
 
-import com.lesdo.standalone.annotation.LocalService;
+import com.lesdo.ext.spring.annotation.LocalService;
 import com.lesdo.standalone.service.UserService;
 import org.jessma.util.LogUtil;
 
 /**
  * Created by jiangshan on 15/3/20.
  */
-@LocalService(UserService.class)
+@LocalService
 public class UserServiceImpl extends AbstractService implements UserService {
     private String test = null;
 //    public UserServiceImpl(String test){
