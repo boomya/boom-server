@@ -3,7 +3,7 @@
 				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				xsi:schemaLocation="http://www.jessma.org http://www.jessma.org/schema/mvc-config-include-3.5.xsd">
 	<actions>
-	    <action name="index" class="com.lesdo.standalone.action.IndexAction">
+	    <action name="index" class="com.boom.server.action.IndexAction">
             <!-- 没有配置 result.name,则 name 默认为 success -->
             <!-- 没有配置 result.type,则 type 默认为 dispatch -->
             <!--<result type="redirect">http://www.baidu.cn</result>-->

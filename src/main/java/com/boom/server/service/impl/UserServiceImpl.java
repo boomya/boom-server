@@ -1,0 +1,25 @@
+package com.boom.server.service.impl;
+
+import com.boom.ext.spring.annotation.LocalService;
+import com.boom.server.service.UserService;
+import org.jessma.util.LogUtil;
+
+/**
+ * Created by jiangshan on 15/3/20.
+ */
+@LocalService
+public class UserServiceImpl extends AbstractService implements UserService {
+    private String test = null;
+//    public UserServiceImpl(String test){
+//        this.test = test;
+//    }
+
+//    public void init(){
+//        LogUtil.getJessMALogger().info("======= INIT =======");
+//    }
+
+    @Override
+    public void sayHello() {
+        LogUtil.getJessMALogger().info("======= Hello World =======" + test);
+    }
+}

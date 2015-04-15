@@ -4,14 +4,11 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.lesdo</groupId>
-	<artifactId>standalone</artifactId>
-	<version>1.0.1</version>
-    <modules>
-        <module>../lesdo-ext-spring</module>
-    </modules>
-    <packaging>pom</packaging>
-	<name>lesdo-standalone</name>
+	<groupId>com.boom</groupId>
+	<artifactId>boom-server</artifactId>
+	<version>1.0.0</version>
+    <packaging>war</packaging>
+	<name>boom-server</name>
 
 	<dependencies>
         <!--<dependency>-->
@@ -40,9 +37,14 @@
             <!--<version>4.1.5.RELEASE</version>-->
         <!--</dependency>-->
         <dependency>
-            <groupId>com.lesdo</groupId>
-            <artifactId>ext-spring</artifactId>
-            <version>1.0.2</version>
+            <groupId>org.boom.share</groupId>
+            <artifactId>manager</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.boom</groupId>
+            <artifactId>boom-ext-spring</artifactId>
+            <version>1.0.0</version>
         </dependency>
         <!--<dependency>-->
             <!--<groupId>org.eclipse.jetty</groupId>-->
@@ -76,23 +78,13 @@
 			<version>2.1</version>
 		</dependency>
         <dependency>
-            <groupId>com.lesdo</groupId>
-            <artifactId>im</artifactId>
-            <version>1.0.6</version>
-        </dependency>
-        <dependency>
             <groupId>org.jodd</groupId>
             <artifactId>jodd-core</artifactId>
             <version>3.6.5</version>
         </dependency>
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>2.5.1</version>
-        </dependency>
 	</dependencies>
 	<build>
-		<finalName>standalone</finalName>
+		<finalName>boom-server-${version}</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -133,7 +125,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.lesdo.standalone.Launched</mainClass>
+                            <mainClass>com.boom.server.Launched</mainClass>
                         </manifest>
                         <manifestEntries>
                             <Class-Path>.</Class-Path>

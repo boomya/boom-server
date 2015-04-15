@@ -39,7 +39,7 @@
 		<action-convention
 			enable="true"
 			detect-physical-file="true"
-            action-base-package="com.lesdo.standalone.action"
+            action-base-package="com.boom.server.action"
 			dispatch-file-path="${jsp-path}"
 			dispatch-file-type="jsp"
 			physical-file-path=""
@@ -48,7 +48,7 @@
 		
 		<action-filters>
             <!--<filter pattern=".*" class="org.jessma.ext.spring.SpringInjectFilter"/>-->
-            <filter pattern=".*" class="com.lesdo.ext.spring.processor.LocalServiceInjectFilter"/>
+            <filter pattern=".*" class="com.boom.ext.spring.processor.LocalServiceInjectFilter"/>
 			<!--  
 			<filter pattern=".*" class="org.jessma.app.DaoInjectFilter"/>
 			<filter pattern=".*" class="org.jessma.ext.spring.SpringInjectFilter"/>

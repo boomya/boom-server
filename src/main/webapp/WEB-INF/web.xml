@@ -9,7 +9,7 @@
     <!-- Spring 监听器(可选,如果 web.xml 中没用配置 ContextLoaderListener, 则 SpringInjectFilter 会启动一个私有 ContextLoaderListener) -->
     <listener>
         <!--<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
-        <listener-class>com.lesdo.standalone.global.SyxyContextLoaderListener</listener-class>
+        <listener-class>com.boom.server.global.SyxyContextLoaderListener</listener-class>
     </listener>
   <filter>
     <filter-name>ActionDispatcher</filter-name>

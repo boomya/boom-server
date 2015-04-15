@@ -5,8 +5,8 @@
 
     <!-- 系统配置（必填） -->
     <system>
-        <app-life-cycle-listener class="com.lesdo.standalone.global.SyxyAppLifeCycleListener" />
-        <user-config-parser class="com.lesdo.standalone.global.SyxyConfigParser" />
+        <app-life-cycle-listener class="com.boom.server.global.SyxyAppLifeCycleListener" />
+        <user-config-parser class="com.boom.server.global.SyxyConfigParser" />
     </system>
 
     <!-- 用户配置（可选） -->
